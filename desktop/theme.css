@@ -148,27 +148,12 @@ button:active,
 }
 
 /* --------------------------------------------------------------------------
-   7. Clean Branding: Hide Redundant Top Logo & Brand Title
+   7. Clean Branding: Hide Redundant Top-Left Logo & Title
    -------------------------------------------------------------------------- */
 h1.logo,
 .logo-link,
 [data-e2e-messages-title],
-.logo.no-margin,
-.logo-google,
-[class*="google-wordmark"],
-[class*="product-logo"],
-[class*="brand-logo"],
-.brand-logo,
-.header-logo,
-mw-logo,
-header [aria-label*="Google Messages"],
-[role="banner"] [aria-label*="Google Messages"],
-[aria-label="Google Messages"],
-mw-main-nav [class*="title"],
-header [class*="title"]:not([class*="conversation"]) {
+.logo.no-margin {
   display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
+
