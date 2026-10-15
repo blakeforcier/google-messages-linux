@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Google Messages Polished Theme (True Black OLED AMOLED + iMessage + M3)
+   Google Messages Polished Theme (Linux / GNOME Slate + Material 3 + iMessage)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -12,67 +12,67 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. True Black OLED Palette (Pitch Black AMOLED)
+   2. Dark Mode Tokens (Comfortable Slate Dark Palette)
    -------------------------------------------------------------------------- */
 :root,
 body.gm3-bc25-active.dark-theme,
 body.dark-theme,
 html.os-prefers-dark body {
-  /* True Pitch Black Canvas */
-  --mat-sys-background: #000000 !important;
-  --body-bg-color: #000000 !important;
-  --mat-app-background-color: #000000 !important;
+  /* Ubuntu / GNOME Libadwaita Dark Palette */
+  --mat-sys-background: #18181b !important;
+  --body-bg-color: #18181b !important;
+  --mat-app-background-color: #18181b !important;
 
   /* Surfaces & Containers */
-  --mat-sys-surface: #000000 !important;
-  --mat-sys-surface-dim: #000000 !important;
-  --mat-sys-surface-bright: #121214 !important;
-  --mat-sys-surface-container-lowest: #000000 !important;
-  --mat-sys-surface-container-low: #070709 !important;
-  --mat-sys-surface-container: #0d0d10 !important;
-  --mat-sys-surface-container-high: #16161b !important;
-  --mat-sys-surface-container-highest: #1f1f26 !important;
+  --mat-sys-surface: #1e1e22 !important;
+  --mat-sys-surface-dim: #141416 !important;
+  --mat-sys-surface-bright: #26262b !important;
+  --mat-sys-surface-container-lowest: #121214 !important;
+  --mat-sys-surface-container-low: #1e1e22 !important;
+  --mat-sys-surface-container: #242428 !important;
+  --mat-sys-surface-container-high: #2c2c32 !important;
+  --mat-sys-surface-container-highest: #34343b !important;
 
-  /* Accent: Electric iMessage Blue (High Contrast on OLED Black) */
-  --mat-sys-primary: #0a84ff !important;
+  /* Accent: Refined GNOME / iMessage Blue */
+  --mat-sys-primary: #3584e4 !important;
   --mat-sys-on-primary: #ffffff !important;
-  --mat-sys-primary-container: #0071e3 !important;
+  --mat-sys-primary-container: #1c71d8 !important;
   --mat-sys-on-primary-container: #ffffff !important;
-  --gm3-sys-color-primary: #0a84ff !important;
-  --gm3-sys-color-secondary-container: #16161b !important;
+  --gm3-sys-color-primary: #3584e4 !important;
+  --gm3-sys-color-secondary-container: #2c2c32 !important;
 
   /* Secondary & Surfaces */
   --mat-sys-secondary: #9da3af !important;
-  --mat-sys-secondary-container: #16161b !important;
-  --mat-sys-on-secondary-container: #ffffff !important;
+  --mat-sys-secondary-container: #2c2c32 !important;
+  --mat-sys-on-secondary-container: #f3f4f6 !important;
 
   /* Text & Outlines */
-  --mat-sys-on-background: #ffffff !important;
-  --mat-sys-on-surface: #ffffff !important;
-  --mat-sys-on-surface-variant: #a1a1aa !important;
+  --mat-sys-on-background: #f3f4f6 !important;
+  --mat-sys-on-surface: #f3f4f6 !important;
+  --mat-sys-on-surface-variant: #9ca3af !important;
   --mat-sys-outline: rgba(255, 255, 255, 0.12) !important;
-  --mat-sys-outline-variant: rgba(255, 255, 255, 0.07) !important;
+  --mat-sys-outline-variant: rgba(255, 255, 255, 0.08) !important;
 
   /* Focus & Scrollbar */
   --scroll-bar-bg-color: transparent !important;
-  --focus-ring-color: #0a84ff !important;
+  --focus-ring-color: #3584e4 !important;
 }
 
 /* --------------------------------------------------------------------------
    3. App Canvas & Base Layout
    -------------------------------------------------------------------------- */
 body, mw-app, .mw-app-view {
-  background-color: #000000 !important;
-  color: #ffffff !important;
+  background-color: var(--mat-sys-background) !important;
+  color: var(--mat-sys-on-background) !important;
 }
 
 /* --------------------------------------------------------------------------
-   4. Sidebar: Pitch Black Conversation List
+   4. Sidebar: Clean GNOME Conversation List
    -------------------------------------------------------------------------- */
 mw-conversations-list,
 .conversations-list-container {
-  background-color: #08080a !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background-color: var(--mat-sys-surface-container-low) !important;
+  border-right: 1px solid var(--mat-sys-outline-variant) !important;
 }
 
 /* Conversation list items */
@@ -86,7 +86,7 @@ mw-conversation-list-item,
 
 mw-conversation-list-item:hover,
 .mat-mdc-list-item:hover {
-  background-color: #141418 !important;
+  background-color: var(--mat-sys-surface-container-high) !important;
 }
 
 /* Active / Selected conversation */
@@ -94,7 +94,7 @@ mw-conversation-list-item:hover,
 .mat-mdc-list-item.active,
 mw-conversation-list-item[selected],
 [aria-selected="true"] {
-  background-color: #1a1a22 !important;
+  background-color: var(--mat-sys-surface-container-highest) !important;
   box-shadow: inset 3px 0 0 var(--mat-sys-primary) !important;
 }
 
@@ -109,21 +109,11 @@ mw-conversation-list-item[selected],
 .start-chat-fab:hover,
 [aria-label="Start chat"]:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(10, 132, 255, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(53, 132, 228, 0.3) !important;
 }
 
 /* --------------------------------------------------------------------------
-   5. Headers: True Black Bar
-   -------------------------------------------------------------------------- */
-mw-conversation-header,
-.mws-conversation-header,
-header {
-  background-color: #000000 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* --------------------------------------------------------------------------
-   6. Native-like Slim Scrollbars
+   5. Native-like Slim Scrollbars
    -------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
   width: 6px !important;
@@ -144,7 +134,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   7. Smooth Material 3 Micro-interactions
+   6. Smooth Material 3 Micro-interactions
    -------------------------------------------------------------------------- */
 button,
 .mat-mdc-icon-button,
@@ -158,7 +148,7 @@ button:active,
 }
 
 /* --------------------------------------------------------------------------
-   8. Clean Branding: Hide Redundant Top Logo & Brand Title
+   7. Clean Branding: Hide Redundant Top Logo & Brand Title
    -------------------------------------------------------------------------- */
 h1.logo,
 .logo-link,

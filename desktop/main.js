@@ -12,7 +12,7 @@ function createWindow() {
     minHeight: 500,
     title: 'Messages',
     icon: path.join(__dirname, 'icon.png'),
-    backgroundColor: '#000000',
+    backgroundColor: '#18181b',
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
