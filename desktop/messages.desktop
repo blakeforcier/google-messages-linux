@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Messages
+Comment=Google Messages Desktop App
+Exec=/home/bforce/.local/share/google-messages-desktop/start.sh
+Icon=/home/bforce/.local/share/google-messages-desktop/icon.png
+Terminal=false
+Type=Application
+Categories=Network;Chat;InstantMessaging;
+StartupWMClass=google-messages-desktop

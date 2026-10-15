@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Google Messages Polished Theme (Linux / GNOME)",
+  "version": "1.0.0",
+  "description": "Blends Linux/GNOME native dark mode, Material 3 animations, and clean iMessage minimalism for Google Messages Web.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://messages.google.com/*"
+      ],
+      "css": [
+        "theme.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "Google Messages Polished Theme"
+  }
+}

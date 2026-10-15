@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Google Messages Polished Theme (True Black OLED AMOLED + iMessage + M3)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Typography & Global Resets
+   -------------------------------------------------------------------------- */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Ubuntu", "Cantarell", "Inter", "Segoe UI", Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. True Black OLED Palette (Pitch Black AMOLED)
+   -------------------------------------------------------------------------- */
+:root,
+body.gm3-bc25-active.dark-theme,
+body.dark-theme,
+html.os-prefers-dark body {
+  /* True Pitch Black Canvas */
+  --mat-sys-background: #000000 !important;
+  --body-bg-color: #000000 !important;
+  --mat-app-background-color: #000000 !important;
+
+  /* Surfaces & Containers */
+  --mat-sys-surface: #000000 !important;
+  --mat-sys-surface-dim: #000000 !important;
+  --mat-sys-surface-bright: #121214 !important;
+  --mat-sys-surface-container-lowest: #000000 !important;
+  --mat-sys-surface-container-low: #070709 !important;
+  --mat-sys-surface-container: #0d0d10 !important;
+  --mat-sys-surface-container-high: #16161b !important;
+  --mat-sys-surface-container-highest: #1f1f26 !important;
+
+  /* Accent: Electric iMessage Blue (High Contrast on OLED Black) */
+  --mat-sys-primary: #0a84ff !important;
+  --mat-sys-on-primary: #ffffff !important;
+  --mat-sys-primary-container: #0071e3 !important;
+  --mat-sys-on-primary-container: #ffffff !important;
+  --gm3-sys-color-primary: #0a84ff !important;
+  --gm3-sys-color-secondary-container: #16161b !important;
+
+  /* Secondary & Surfaces */
+  --mat-sys-secondary: #9da3af !important;
+  --mat-sys-secondary-container: #16161b !important;
+  --mat-sys-on-secondary-container: #ffffff !important;
+
+  /* Text & Outlines */
+  --mat-sys-on-background: #ffffff !important;
+  --mat-sys-on-surface: #ffffff !important;
+  --mat-sys-on-surface-variant: #a1a1aa !important;
+  --mat-sys-outline: rgba(255, 255, 255, 0.12) !important;
+  --mat-sys-outline-variant: rgba(255, 255, 255, 0.07) !important;
+
+  /* Focus & Scrollbar */
+  --scroll-bar-bg-color: transparent !important;
+  --focus-ring-color: #0a84ff !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. App Canvas & Base Layout
+   -------------------------------------------------------------------------- */
+body, mw-app, .mw-app-view {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Sidebar: Pitch Black Conversation List
+   -------------------------------------------------------------------------- */
+mw-conversations-list,
+.conversations-list-container {
+  background-color: #08080a !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Conversation list items */
+mw-conversation-list-item,
+.mat-mdc-list-item,
+.mdc-list-item {
+  border-radius: 12px !important;
+  margin: 2px 8px !important;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+mw-conversation-list-item:hover,
+.mat-mdc-list-item:hover {
+  background-color: #141418 !important;
+}
+
+/* Active / Selected conversation */
+.mat-mdc-list-item.selected,
+.mat-mdc-list-item.active,
+mw-conversation-list-item[selected],
+[aria-selected="true"] {
+  background-color: #1a1a22 !important;
+  box-shadow: inset 3px 0 0 var(--mat-sys-primary) !important;
+}
+
+/* "Start chat" pill button */
+.start-chat-fab,
+[aria-label="Start chat"] {
+  border-radius: 24px !important;
+  font-weight: 500 !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.start-chat-fab:hover,
+[aria-label="Start chat"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(10, 132, 255, 0.35) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Headers: True Black Bar
+   -------------------------------------------------------------------------- */
+mw-conversation-header,
+.mws-conversation-header,
+header {
+  background-color: #000000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Native-like Slim Scrollbars
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Smooth Material 3 Micro-interactions
+   -------------------------------------------------------------------------- */
+button,
+.mat-mdc-icon-button,
+.gmat-mdc-button {
+  transition: transform 0.15s ease, background-color 0.2s ease !important;
+}
+
+button:active,
+.mat-mdc-icon-button:active {
+  transform: scale(0.95);
+}
+
+/* --------------------------------------------------------------------------
+   8. Clean Branding: Hide Redundant Top Logo & Brand Title
+   -------------------------------------------------------------------------- */
+h1.logo,
+.logo-link,
+[data-e2e-messages-title],
+.logo.no-margin,
+.logo-google,
+[class*="google-wordmark"],
+[class*="product-logo"],
+[class*="brand-logo"],
+.brand-logo,
+.header-logo,
+mw-logo,
+header [aria-label*="Google Messages"],
+[role="banner"] [aria-label*="Google Messages"],
+[aria-label="Google Messages"],
+mw-main-nav [class*="title"],
+header [class*="title"]:not([class*="conversation"]) {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
